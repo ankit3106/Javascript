@@ -17,6 +17,30 @@ const myFunction = function(){
     console.log("Hello World");
 }
 
-const a = Symbol('123')
-const b = Symbol('a')
-console.log(typeof b);
+// const a = Symbol('123')
+// const b = Symbol('a')
+// console.log(typeof b);
+
+
+// *********************************************
+//
+// Stack(Primitive) , Heap(Non Primitive)
+
+let myName = "ankit"
+let name = myName
+name = "Luffytarow"
+
+console.log(myName);
+console.log(name);
+
+let user = {
+    email : "ankit@google.com",
+    upi : "ankit@oksbi",
+}
+
+let userTwo = user
+
+userTwo.email = "luffy@gmail.com"
+
+console.log(user.email);
+console.log(userTwo.email);
