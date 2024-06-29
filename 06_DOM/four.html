@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Edit and remove elements</title>
+</head>
+<body style = "background-color: black ; color: aliceblue;">
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+    
+</body>
+<script>
+    function addLanguage(langName){
+        const li = document.createElement('li')
+        li.innerHTML = `${langName}`
+        document.querySelector('.language').appendChild(li)
+    }
+    addLanguage("Python")
+    addLanguage("Kotlin")
+
+    function addLang(langName){ // This is optimised approach bcz to add an element we do not have to traverse the whole element
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(li)
+    }
+    addLang("C++")
+    addLang("Typescript")
+
+
+    // Edit
+
+    const seclang = document.querySelector("li:nth-child(2)")
+    // seclang.innerHTML = "React"
+    const newli = document.createElement('li')
+    newli.textContent = "React"
+    seclang.replaceWith(newli)
+
+    const secondlang = document.querySelector("li:first-child")
+    secondlang.outerHTML = '<li>Python</li>'
+
+    // Remove
+
+    const lastLang = document.querySelector('li:last-child')
+    lastLang.remove()
+</script>
+</html>
