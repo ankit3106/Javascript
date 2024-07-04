@@ -1,0 +1,23 @@
+body{
+    background-color: #212121;
+    color :aliceblue;
+}
+nav{
+    width: 1400px;
+    height: 30px;
+    background-color: #d5a813;
+    border-radius: 20px;
+    padding-top: 10px;
+    padding-left: 100px;
+}
+.first{
+    color: #212121;
+    margin : 25px;
+    text-decoration: none;
+
+}
+.second{
+    color: #212121;
+    margin: 25px;
+    text-decoration: none;
+}
